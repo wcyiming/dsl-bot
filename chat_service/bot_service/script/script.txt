@@ -1,0 +1,79 @@
+state 0
+reply: choose the game store you want to know
+steam
+epic
+origin
+uplay
+end reply
+event: steam goto: 1
+event: epic goto: 4
+event: origin goto: 6
+event: uplay goto: 7
+
+state 1
+reply: Steam is a video game digital distribution service by Valve. 
+It was launched as a standalone software client in September 2003 as a way for Valve to provide automatic updates for their games, and expanded to include games from third-party publishers. 
+Steam has also expanded into an online web-based and mobile digital storefront. Steam offers digital rights management (DRM), server hosting, video streaming, and social networking services. It also provides the user with installation and automatic updating of games, and community features such as friends lists and groups, cloud storage, and in-game voice and chat functionality.
+you can enter: 
+"buy" to jump to the store,
+"search" to jump to the game information search engine,
+"back" to return to the menu,
+"" shouldn't be entered
+end reply
+event: buy goto 2
+event: search goto 3
+event: back goto 0 
+
+state 2
+reply: https://store.steampowered.com
+you can search the game you want and buy it in this website
+enter: "back" to return to the menu
+end reply
+event: back goto 0 
+
+state 3
+reply: https://steamdb.info
+this website is the database of steam which you can search history price and more information of games
+you can search the information of the game you want in this website
+enter: "back" to return to the menu
+end reply
+event: back goto 0 
+
+state 4
+reply: The Epic Games Store is a digital video game storefront for Microsoft Windows and macOS, operated by Epic Games. 
+It launched in December 2018 as both a website and a standalone launcher, of which the latter is required to download and play games. 
+The storefront provides a basic catalog, friends list management, matchmaking, and other features. 
+Epic Games has further plans to expand the feature set of the store front but it does not plan to add as many features as other digital distribution platforms, such as discussion boards or user reviews, instead using existing social media platforms to support these.
+the website is: https://www.epicgames.com/store/zh-CN.
+enter: "free" to jump to the weekly free game of epic,
+enter: "back" to return to the menu,
+end reply
+event: free goto 5
+event: back goto 0 
+
+state 5
+reply: https://www.epicgames.com/store/zh-CN/free-games
+this website is the free game that epic will send different game which used to be charged for free
+you must buy the game(cost 0) so that you can get the present
+enter: "back" to return to the menu
+end reply
+event: back goto 0 
+
+state 6
+reply: Origin is a digital distribution platform developed by Electronic Arts for purchasing and playing video games. 
+The platform's software client is available for personal computer and mobile platforms.
+Origin contains social features such as profile management, networking with friends with chat and direct game joining along with an in-game overlay.
+the website is: https://www.origin.com/hkg/zh-tw/store
+enter: "back" to return to the menu
+end reply
+event: back goto 0 
+
+state 7
+reply: Ubisoft Connect (formerly Uplay) is a digital distribution, digital rights management, multiplayer and communications service developed by Ubisoft to provide an experience similar to the achievements/trophies offered by various other game companies. 
+The service is provided across various platforms. Ubisoft Connect is used exclusively by first-party Ubisoft games, and although some third-party ones are sold through the Ubisoft store, they do not use the Ubisoft Connect platform.
+the website is: https://store.ubi.com/cn/home
+enter: "back" to return to the menu
+end reply
+event: back goto 0 
+
+default: I can't understand.Please ask in form.
